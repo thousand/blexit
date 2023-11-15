@@ -31,6 +31,7 @@ body {
   margin: 0;
   font-size: min(03vw, 10vh);
   background: var(--pinkish);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
