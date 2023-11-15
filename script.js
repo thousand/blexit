@@ -33,3 +33,9 @@ function formatNum(num, char = '0') {
 
 update();
 setInterval(update, 1000);
+
+const discordToggle = document.querySelector('.discord-toggle');
+discordToggle.addEventListener('click', () => {
+  discordToggle.classList.toggle('active');
+  document.querySelector('.discord-info').classList.toggle('active');
+});
