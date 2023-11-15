@@ -1,0 +1,92 @@
+:root {
+  
+  --p-stop-1: #C0C;
+  --p-stop-2: #26E;
+  --c-stop-1: #0DD;
+  --c-stop-2: #26E;
+  --pinkish: linear-gradient(to bottom, var(--p-stop-1), var(--p-stop-2));
+  --cyanish: linear-gradient(to bottom, var(--c-stop-1), var(--c-stop-2));
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  font-family: "monotalic", monospace;
+  font-weight: 700;
+  font-style: normal;
+  color: #eee;
+  background: #222 linear-gradient(to top right, #402, #136);
+}
+
+.blexit {
+  margin: 0;
+  font-size: min(03vw, 10vh);
+  background: var(--pinkish);
+  background-clip: text;
+  color: transparent;
+}
+
+.fire {
+  margin: 0.2em 0;
+  font-size: min(09vw, 35vh);
+  background: #eee var(--cyanish);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.days, .hrs, .mins, .secs {
+  font-family: 'monotalic-wide', monospace;
+}
+
+.sep, .days-label {
+  background: var(--pinkish);
+  font-size: 0.666em;
+  vertical-align: middle;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: opacity 0.2s;
+}
+
+.fire.blink .sep {
+  opacity: 0;
+}
+
+.elsewhere {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-size: min(04vw, 15vh);
+  gap: 0.2em;
+}
+
+.elsewhere svg {
+  height: 1em;
+  width: 1em;
+}
+
+.elsewhere svg .stuff {
+  fill: url('#pinkishGrad');
+}
+.elsewhere a:hover svg .stuff {
+  fill: url('#cyanishGrad');
+}
+
+#svgGrads {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  visibility: hidden;
+}
